@@ -1,0 +1,5630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>950</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1500</width>
+    <height>950</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1500</width>
+    <height>950</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Text-generation-webui 懒人包 b站@coyude</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="s.qrc">
+    <normaloff>:/ss/kr.jpg</normaloff>
+    <normalon>:/ss/C:/Users/25101/Desktop/素材/t.png</normalon>:/ss/kr.jpg</iconset>
+  </property>
+  <widget class="QListWidget" name="list">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>200</width>
+     <height>950</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>950</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>950</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListView {
+	font: 20px &quot;微软雅黑&quot;;
+}
+QListWidget{
+	background:rgba(0, 204, 255,20)
+}
+QListView::item {
+    height: 70px;
+}
+QListWidget::item:selected:active {
+    background-color: white;
+    color: black;
+}
+QListWidget:focus {
+    outline: none;
+}
+
+QListWidget::item:selected:!active {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="movement">
+    <enum>QListView::Static</enum>
+   </property>
+   <property name="flow">
+    <enum>QListView::TopToBottom</enum>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="currentRow">
+    <number>0</number>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>  程序主页</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/首页06.png</normaloff>:/ss/首页06.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>  启动参数</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/设置-12.png</normaloff>:/ss/设置-12.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>  模型管理</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/文件审批 (1).png</normaloff>:/ss/文件审批 (1).png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>  更新管理</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/下载 (8) (1).png</normaloff>:/ss/下载 (8) (1).png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>  功能合集</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/维修 (1).png</normaloff>:/ss/维修 (1).png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>  更多信息</string>
+    </property>
+    <property name="icon">
+     <iconset resource="s.qrc">
+      <normaloff>:/ss/信息 (5).png</normaloff>:/ss/信息 (5).png</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>950</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1300</width>
+     <height>950</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1300</width>
+     <height>950</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="home">
+    <widget class="QPushButton" name="hoRun">
+     <property name="geometry">
+      <rect>
+       <x>1060</x>
+       <y>860</y>
+       <width>211</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+	font: 36px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+     </property>
+     <property name="text">
+      <string>启动</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="hoChose">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>890</y>
+       <width>470</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>800</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="s.qrc">:/ss/bgyj.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_47">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>540</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 30px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>公告</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_48">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>540</y>
+       <width>41</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="s.qrc">:/ss/公告 (1).png</pixmap>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="hoAnno">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>600</y>
+       <width>761</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="plainText">
+      <string>
+
+
+	  	     如果你能看到这段话，代表公告获取失败！</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="hoRefresh">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>885</y>
+       <width>51</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="s.qrc">
+       <normaloff>:/ss/操作-复位 (6).png</normaloff>:/ss/操作-复位 (6).png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="launch">
+    <widget class="QScrollArea" name="scrollArea_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1300</width>
+       <height>950</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scr_launch">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1279</width>
+        <height>2650</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>2650</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>1241</width>
+         <height>841</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}
+</string>
+       </property>
+       <property name="title">
+        <string> 常规选项</string>
+       </property>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>50</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laMode">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string>Chat</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>Chat</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Notebook</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用模式</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>选择Chat模式(对话聊天模式)或Notebook模式(单次长文本任务模式)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>150</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>API服务</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>721</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>生成类KoboldAI的api，供TavernAI和Agn-AI等UI使用，API链接默认是127.0.0.1:5000</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="laApi">
+         <property name="geometry">
+          <rect>
+           <x>1118</x>
+           <y>10</y>
+           <width>41</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/查关系.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>250</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLineEdit" name="laOpt">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>20</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>追加参数</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>追加启动参数，请查阅Github文档</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/添加-细.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>350</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laRunMode">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string>GPU</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>GPU</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CPU</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>运行模式</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>选择CPU或GPU来加载模型</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/工具.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_9">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>450</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_28">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>trust-remote-code</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_29">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>加载ChatGLM模型时请勾选此项</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="laTru">
+         <property name="geometry">
+          <rect>
+           <x>1118</x>
+           <y>10</y>
+           <width>41</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_30">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/算法管理.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_15">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>550</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_53">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>audo-devices</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_54">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>自动分配到可用的GPU或CPU上。勾选此项可启动多显卡运算</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="laAuto">
+         <property name="geometry">
+          <rect>
+           <x>1118</x>
+           <y>10</y>
+           <width>41</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_55">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/变更 (5).png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_16">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>650</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laEnviro">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string>懒人包环境</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>懒人包环境</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>本机环境</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Conda环境(One-click installers)</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_62">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>运行环境</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_63">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用懒人包环境，本机环境，Conda环境(通过One-click installers安装部署)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_64">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/工作台07 (2).png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_20">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>750</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laloadway">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>transformers</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>llamacpp</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>rwkv</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_67">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>191</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>指定模型加载方式</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_71">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>默认留空即可,一般情况下会自动选择 (GPTQ模型加载请看下方  GPTQ量化加载选项 )</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_72">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>19</y>
+           <width>50</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/gy_系统总览 (2).png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>930</y>
+         <width>1241</width>
+         <height>861</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}
+</string>
+       </property>
+       <property name="title">
+        <string> GPTQ量化加载选项 【加载非GPTQ量化模型时请不要改动此项】</string>
+       </property>
+       <widget class="QFrame" name="frame_6">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>430</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laGptqW">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>271</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>wbits (GPTQ-for-LLaMa参数)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>目前主流为 4bits</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_7">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>530</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laGptqGro">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>32</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>64</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>128</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1024</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_22">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>groupsize (GPTQ-for-LLaMa参数)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>目前主流为 128groupsize</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_8">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>630</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laGptqType">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>llama</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>opt</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>gptj</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>341</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>model_type (GPTQ-for-LLaMa参数)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>目前主流为 llama</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_27">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_14">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>730</y>
+          <width>1180</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_32">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>351</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>pre_layer (GPTQ-for-LLaMa参数)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_33">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>有多少百分比交给显卡运算 若设置为80,则GPU负责80%运算,剩下20%给CPU
+若不填写则为100%交给显卡运算  (PS:乱调容易报错)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_49">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="laPre">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_17">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>50</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laGPTQWay">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ExLlama</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ExLlama_HF</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AutoGPTQ</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GPTQ-for-LLaMa</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_68">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>621</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>加载GPTQ模型的方法</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_69">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用ExLlaMa，ExLlama_HF，AutoGPTQ或GPTQ-for-LLaMa加载</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_70">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/业务扶持.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_28">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>350</y>
+          <width>1180</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_92">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_93">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_94">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>0</y>
+           <width>1051</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>下方四项参数仅适用于GPTQ-for-LLaMa加载</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="warn_6">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>10</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="s.qrc">
+           <normaloff>:/ss/exclamation-point-ring (1).png</normaloff>:/ss/exclamation-point-ring (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>43</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_18">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>150</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_56">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>181</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>monkey-patch</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_57">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>841</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>开启此选项后可在加载4bitGPTQ量化模型的情况下使用Lora (需要使用GPTQ-for-LLaMa加载方能生效)</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="laMonkey">
+         <property name="geometry">
+          <rect>
+           <x>1118</x>
+           <y>10</y>
+           <width>41</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_58">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/book-normal书2.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_21">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>250</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_104">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>模型最大上下文设置（需ExLlama或ExLlama_HF参数+模型支持8Ktokens）</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_105">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>821</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>max_seq_len和compress_pos_emb组合(需要使用ExLlama系且模型支持8K方能生效)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_106">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="laMaxTokens">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2048tokens（2048+1）</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4096tokens（4096+2）</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>6144tokens（6144+3）</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8192tokens（8192+4）</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>1810</y>
+         <width>1241</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}
+</string>
+       </property>
+       <property name="title">
+        <string>Bitsandbytes量化加载选项 【适用于原始非量化模型】</string>
+       </property>
+       <widget class="QFrame" name="frame_22">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>50</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="laBits">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8bit精度</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4bit精度</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_74">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>621</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>加载精度选择</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_75">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用8bit或4bit加载模型</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_76">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/ss/transform转换.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>1990</y>
+         <width>1241</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}
+</string>
+       </property>
+       <property name="title">
+        <string>RWKV模型加载选项 注意：rwkv模型请直接放在models根目录下</string>
+       </property>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>150</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>281</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>rwkv-strategy (加载策略)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>加载rwkv模型时的策略，如&quot;cuda fp16&quot;或&quot;cuda fp16i8&quot;(更多请翻阅rwkv文档)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_18">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/arrow-right-double双箭头-右.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="laRWKVStrategy">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image:url(:/ss/arrow-single-down箭头-下.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>&quot;cuda fp16i8&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>&quot;cuda fp16&quot;</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_19">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>50</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_61">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>301</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>rwkv-cuda-on(编译cuda内核)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_65">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>1001</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>开启后能提升rwkv模型速度(需要安装Visual Studio生成工具并在系统变量中添加cl编译器或在x64 Native Tools中运行bat)</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="laRWKVCUDA">
+         <property name="geometry">
+          <rect>
+           <x>1118</x>
+           <y>10</y>
+           <width>41</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_66">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/cda.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_29">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>250</y>
+          <width>1180</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_95">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_96">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_97">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>0</y>
+           <width>1051</width>
+           <height>71</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>自定义填写rwkv-strategy时，要加上&quot;&quot;，例如&quot;cuda fp16i8&quot;</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="warn_7">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>10</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="s.qrc">
+           <normaloff>:/ss/exclamation-point-ring (1).png</normaloff>:/ss/exclamation-point-ring (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>43</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>2350</y>
+         <width>1241</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}
+</string>
+       </property>
+       <property name="title">
+        <string>llama.cpp加载选项 【加载ggml模型】 注意：ggml模型请直接放在models根目录下</string>
+       </property>
+       <widget class="QFrame" name="frame_23">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>50</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_77">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>621</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>GPU加速</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_78">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>卸载到GPU的layer数 (可从10开始，若设置为1000000000则将所有layer卸载到GPU)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_79">
+         <property name="geometry">
+          <rect>
+           <x>17</x>
+           <y>19</y>
+           <width>50</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image: url(:/ss/me_能耗管理 (5).png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="laGGMLlayer">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_30">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>150</y>
+          <width>1180</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_98">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_99">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_100">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>0</y>
+           <width>1051</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>首次启用GPU加速前必须点击右方“编译加速”按钮
+PS：电脑需要安装Visual Studio生成工具 (安装时选择桌面C++开发选项）</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="warn_8">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>13</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="s.qrc">
+           <normaloff>:/ss/exclamation-point-ring (1).png</normaloff>:/ss/exclamation-point-ring (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>43</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="laGGMLGPUON">
+         <property name="geometry">
+          <rect>
+           <x>970</x>
+           <y>20</y>
+           <width>181</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 25px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+         </property>
+         <property name="text">
+          <string>编译加速</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="model">
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>691</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 35px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>      hugging face用户名/仓库名</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>270</y>
+       <width>221</width>
+       <height>56</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 24px &quot;微软雅黑&quot;;</string>
+     </property>
+     <property name="text">
+      <string>已检测到的本地模型</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Hugg">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>34</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="s.qrc">
+       <normaloff>:/ss/huggingface_logo-noborder.png</normaloff>:/ss/huggingface_logo-noborder.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>43</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="moRefresh">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>260</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 24px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+     </property>
+     <property name="text">
+      <string>刷新列表</string>
+     </property>
+     <property name="icon">
+      <iconset resource="s.qrc">
+       <normaloff>:/ss/操作-复位 (6).png</normaloff>:/ss/操作-复位 (6).png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>1241</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <widget class="QLineEdit" name="moHugg">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>461</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="moStart">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>85</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+      </property>
+      <property name="text">
+       <string>开始下载</string>
+      </property>
+      <property name="icon">
+       <iconset resource="s.qrc">
+        <normaloff>:/ss/操作-文件下载 (2).png</normaloff>:/ss/操作-文件下载 (2).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>45</width>
+        <height>45</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>353</x>
+        <y>140</y>
+        <width>471</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 17px &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string>如TheBloke/Wizard-Vicuna-13B-Uncensored-GPTQ</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="moText">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>92</y>
+        <width>41</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox{
+    spacing: 35px;
+}
+QCheckBox::indicator {
+	width: 35px;
+	height: 35px;
+}
+QCheckBox::indicator:unchecked {
+    image: url(:/ss/未勾选.png);
+}
+QCheckBox::indicator:unchecked:hover {
+    image: url(:/ss/选中 (2).png)
+}
+QCheckBox::indicator:checked {
+    image: url(:/ss/复选框-选中.png)
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_52">
+      <property name="geometry">
+       <rect>
+        <x>1063</x>
+        <y>75</y>
+        <width>161</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 22px &quot;微软雅黑&quot;;</string>
+      </property>
+      <property name="text">
+       <string>仅下载配置文件</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>260</y>
+       <width>71</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/ss/模型管理.png</normalon>
+      </iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>45</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QTreeWidget" name="moList">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>330</y>
+       <width>1241</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTreeView::item {
+        padding-top: 4px;
+        padding-bottom: 4px;
+margin:10px;}
+QTreeView {
+       font-family: &quot;微软雅黑&quot;;
+       font-size: 22px;
+ }</string>
+     </property>
+     <attribute name="headerMinimumSectionSize">
+      <number>200</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>   序号</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>文件大小</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>模型名称</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+    <zorder>Hugg</zorder>
+    <zorder>frame_10</zorder>
+    <zorder>label_13</zorder>
+    <zorder>moRefresh</zorder>
+    <zorder>pushButton</zorder>
+    <zorder>label_15</zorder>
+    <zorder>moList</zorder>
+   </widget>
+   <widget class="QWidget" name="update">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>1241</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}</string>
+     </property>
+     <property name="title">
+      <string>更新Text-generation-webui</string>
+     </property>
+     <widget class="QFrame" name="frame_11">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>60</y>
+        <width>1180</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <widget class="QComboBox" name="upGit">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>26</y>
+         <width>351</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+       </property>
+       <property name="currentText">
+        <string>Github</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Github</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>KGithub</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>10</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string>使用更新源</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>671</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string>选择Github源更新或KGithub镜像源更新</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>19</y>
+         <width>45</width>
+         <height>45</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/ss/列表.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="upStart">
+      <property name="geometry">
+       <rect>
+        <x>1015</x>
+        <y>180</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+      </property>
+      <property name="text">
+       <string> 开始更新</string>
+      </property>
+      <property name="icon">
+       <iconset resource="s.qrc">
+        <normaloff>:/ss/download下载2 (1).png</normaloff>:/ss/download下载2 (1).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="upBack">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>180</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+      </property>
+      <property name="text">
+       <string> 版本回退</string>
+      </property>
+      <property name="icon">
+       <iconset resource="s.qrc">
+        <normaloff>:/ss/返回.png</normaloff>:/ss/返回.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="upInstall">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>180</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+      </property>
+      <property name="text">
+       <string> 更新依赖</string>
+      </property>
+      <property name="icon">
+       <iconset resource="s.qrc">
+        <normaloff>:/ss/程序 (1).png</normaloff>:/ss/程序 (1).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="upOpen">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>180</y>
+        <width>191</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+      </property>
+      <property name="text">
+       <string> 打开环境</string>
+      </property>
+      <property name="icon">
+       <iconset resource="s.qrc">
+        <normaloff>:/ss/code (5).png</normaloff>:/ss/code (5).png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tools">
+    <widget class="QScrollArea" name="scrollArea_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1300</width>
+       <height>950</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scr_tools">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1279</width>
+        <height>1300</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>1300</height>
+       </size>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QGroupBox" name="Agn">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>1241</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}</string>
+       </property>
+       <property name="title">
+        <string>Agn-AI 【首次使用请先点击更新！！！】</string>
+       </property>
+       <widget class="QFrame" name="frame_24">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>55</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="toAgnGit">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string>Github</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>Github</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>KGithub</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_80">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用更新源</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_81">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>选择Github源更新或KGithub镜像源更新</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_82">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="toAgnUp">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>265</y>
+          <width>191</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+        </property>
+        <property name="text">
+         <string>更新</string>
+        </property>
+        <property name="icon">
+         <iconset resource="s.qrc">
+          <normaloff>:/ss/操作-文件下载 (2).png</normaloff>:/ss/操作-文件下载 (2).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toAgnRun">
+        <property name="geometry">
+         <rect>
+          <x>1000</x>
+          <y>265</y>
+          <width>191</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+        </property>
+        <property name="text">
+         <string>运行</string>
+        </property>
+        <property name="icon">
+         <iconset resource="s.qrc">
+          <normaloff>:/ss/right-block.png</normaloff>:/ss/right-block.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_25">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>155</y>
+          <width>1180</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_83">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_84">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_85">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>21</y>
+           <width>1051</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Agn-AI的聊天记录,角色卡和设置均保存在C:\Users\你的用户名\.agnai\中,请妥善保存。
+</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="warn_4">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>10</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="s.qrc">
+           <normaloff>:/ss/exclamation-point-ring (1).png</normaloff>:/ss/exclamation-point-ring (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>43</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Agn_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>830</y>
+         <width>1231</width>
+         <height>551</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}</string>
+       </property>
+       <property name="title">
+        <string>有用网站</string>
+       </property>
+       <widget class="QPushButton" name="toWr">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>551</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	text-align: left; 
+	padding-left: 20px; 
+	font: 30px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+        </property>
+        <property name="text">
+         <string>          角色卡书写指导</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/ss/003_重做.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toChar">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>80</y>
+          <width>551</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	text-align: left; 
+	padding-left: 20px; 
+	font: 30px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+        </property>
+        <property name="text">
+         <string>         characterhub[杂]</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/ss/003_重做.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toCAI">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>200</y>
+          <width>551</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	text-align: left; 
+	padding-left: 20px; 
+	font: 30px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+        </property>
+        <property name="text">
+         <string>  CAI(可通过插件导出聊天记录)</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/ss/003_重做.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toPyg">
+        <property name="geometry">
+         <rect>
+          <x>650</x>
+          <y>200</y>
+          <width>551</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	text-align: left; 
+	padding-left: 20px; 
+	font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+        </property>
+        <property name="text">
+         <string>  pygmalionai频道(含角色卡专区)</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/ss/003_重做.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toCE">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>320</y>
+          <width>551</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	text-align: left; 
+	padding-left: 20px; 
+	font: 30px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+        </property>
+        <property name="text">
+         <string>          角色卡书写网站</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/ss/003_重做.png</normalon>
+         </iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>66</width>
+          <height>66</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="Tavernai_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>420</y>
+         <width>1241</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox{
+    border: none;
+	font:27px &quot;微软雅黑&quot;;
+}</string>
+       </property>
+       <property name="title">
+        <string>SillyTavern 【首次使用请先点击更新！！！】</string>
+       </property>
+       <widget class="QFrame" name="frame_26">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>55</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QComboBox" name="toTaGit">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>26</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox::drop-down
+{
+	subcontrol-origin: padding;
+	subcontrol-position: center right;
+	width: 30px;
+	border:none;
+}
+QComboBox::down-arrow {
+     image: url(:/ss/收起.png)
+  }
+QComboBox {
+	font: 23px &quot;微软雅黑&quot;;
+}</string>
+         </property>
+         <property name="currentText">
+          <string>Github</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>Github</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>KGithub</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="label_86">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>使用更新源</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_87">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>选择Github源更新或KGithub镜像源更新</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_88">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>19</y>
+           <width>45</width>
+           <height>45</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/列表.png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="toTaUp">
+        <property name="geometry">
+         <rect>
+          <x>790</x>
+          <y>265</y>
+          <width>191</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+        </property>
+        <property name="text">
+         <string>更新</string>
+        </property>
+        <property name="icon">
+         <iconset resource="s.qrc">
+          <normaloff>:/ss/操作-文件下载 (2).png</normaloff>:/ss/操作-文件下载 (2).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="toTaRu">
+        <property name="geometry">
+         <rect>
+          <x>1000</x>
+          <y>265</y>
+          <width>191</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color:white;
+    background-color:rgba(0, 120, 255,160);
+ 	border-radius: 20px;
+font: 27px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 130)
+}</string>
+        </property>
+        <property name="text">
+         <string>运行</string>
+        </property>
+        <property name="icon">
+         <iconset resource="s.qrc">
+          <normaloff>:/ss/right-block.png</normaloff>:/ss/right-block.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_27">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>155</y>
+          <width>1180</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLabel" name="label_89">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_90">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_91">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>20</y>
+           <width>1051</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>若需迁移,请在tgwebui目录下的tools文件夹中,删除名为SillyTavern的文件夹。
+随后将待迁移的SillyTavern文件夹移动到tools文件夹下。</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="warn_5">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>15</y>
+           <width>61</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color:rgb(240,240,240);	
+	 	border-radius: 20px;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="s.qrc">
+           <normaloff>:/ss/exclamation-point-ring (1).png</normaloff>:/ss/exclamation-point-ring (1).png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>43</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="more">
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>180</y>
+       <width>1161</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+    border: none;
+	font:38px &quot;微软雅黑&quot;;
+}</string>
+     </property>
+     <property name="title">
+      <string>懒人包和启动器信息</string>
+     </property>
+     <widget class="QFrame" name="frame_12">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>110</y>
+        <width>401</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(250,250,250);border-radius: 20px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <widget class="QLabel" name="label_39">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>22</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 35px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 制作者</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_40">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>55</y>
+         <width>261</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(59, 59, 59);
+font: 38px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string> coyude</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>65</width>
+         <height>65</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/ss/003_开户.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>label_40</zorder>
+      <zorder>label_39</zorder>
+      <zorder>label_41</zorder>
+     </widget>
+     <widget class="QPushButton" name="more_bili">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>110</y>
+        <width>401</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+	font: 33px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+      </property>
+      <property name="text">
+       <string>B站:coyude
+(点击打开)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_42">
+      <property name="geometry">
+       <rect>
+        <x>685</x>
+        <y>127</y>
+        <width>66</width>
+        <height>66</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(:/ss/003_播放 (1).png)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>310</y>
+        <width>401</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(250,250,250);border-radius: 20px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <widget class="QLabel" name="label_43">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>22</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 35px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string> QQ群</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_44">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>60</y>
+         <width>261</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(59, 59, 59);
+font: 38px &quot;微软雅黑&quot;;</string>
+       </property>
+       <property name="text">
+        <string> 421378736</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_45">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>65</width>
+         <height>65</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/ss/003_开户.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <zorder>label_44</zorder>
+      <zorder>label_43</zorder>
+      <zorder>label_45</zorder>
+     </widget>
+     <widget class="QPushButton" name="more_tgwebui">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>310</y>
+        <width>401</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+	color:black;
+    background-color:rgb(250,250,250);
+ 	border-radius: 20px;
+font: 33px &quot;微软雅黑&quot;;
+}
+QPushButton:hover {
+     background-color:rgba(0, 120, 255, 30)
+}</string>
+      </property>
+      <property name="text">
+       <string>tgwebui
+项目链接(点击打开)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>685</x>
+        <y>330</y>
+        <width>65</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image:url(:/ss/003_重做.png)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_37">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>860</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>启动器版本：</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>900</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(0, 170, 255);
+font: 24px &quot;微软雅黑&quot;
+</string>
+   </property>
+   <property name="text">
+    <string>V1.9</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_50">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>820</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 24px &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>B站搜索coyude</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="s.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>list</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>stackedWidget</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>389</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,49 @@
+<RCC>
+  <qresource prefix="ss">
+    <file>cda.png</file>
+    <file>arrow-right-double双箭头-右.png</file>
+    <file>gy_系统总览 (2).png</file>
+    <file>book-normal书2.png</file>
+    <file>me_能耗管理 (5).png</file>
+    <file>download下载2 (1).png</file>
+    <file>arrow-single-down箭头-下.png</file>
+    <file>code (5).png</file>
+    <file>业务扶持.png</file>
+    <file>transform转换.png</file>
+    <file>right-block.png</file>
+    <file>code (5).png</file>
+    <file>exclamation-point-ring (1).png</file>
+    <file>程序 (1).png</file>
+    <file>003_重做.png</file>
+    <file>变更 (5).png</file>
+    <file>工作台07 (2).png</file>
+    <file>返回.png</file>
+    <file>公告 (1).png</file>
+    <file>kr.jpg</file>
+    <file>huggingface_logo-noborder.png</file>
+    <file>003_开户.png</file>
+    <file>操作-复位 (6).png</file>
+    <file>003_播放 (1).png</file>
+    <file>操作-文件下载 (2).png</file>
+    <file>bgyj.png</file>
+    <file>算法管理.png</file>
+    <file>工具.png</file>
+    <file>添加-细.png</file>
+    <file>下载 (2).png</file>
+    <file>模型管理.png</file>
+    <file>查关系.png</file>
+    <file>列表.png</file>
+    <file>收起.png</file>
+    <file>mode_1.png</file>
+    <file>source/launch.png</file>
+    <file>未勾选.png</file>
+    <file>复选框-选中.png</file>
+    <file>选中 (2).png</file>
+    <file>设置-12.png</file>
+    <file>维修 (1).png</file>
+    <file>信息 (5).png</file>
+    <file>首页06.png</file>
+    <file>下载 (8) (1).png</file>
+    <file>文件审批 (1).png</file>
+  </qresource>
+</RCC>

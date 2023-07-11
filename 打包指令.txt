@@ -1,1 +1,1 @@
-pyinstaller -w -i kuro.ico -F lazyLauncher.py
+pyinstaller -w -i kuro.ico -F Ui_lazyLauncher.py

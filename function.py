@@ -127,7 +127,8 @@ def getLaunchSet(ui):
         'laRWKVCUDA':ui.laRWKVCUDA.isChecked(),
         'laloadway':ui.laloadway.currentText(),
         'laGGMLlayer':ui.laGGMLlayer.text(),
-        'laMaxTokens':ui.laMaxTokens.currentText()
+        'laMaxTokens':ui.laMaxTokens.currentText(),
+        'laModelDir':ui.laModelDir.text()
     }
     
     for key, value in launchSet.items():
@@ -142,8 +143,7 @@ def getLaunchSet(ui):
         if key=="laTru" and value==True:
             launchInput+="--trust-remote-code "
         if key=="laOpt" and value!="":
-            launchInput+=launchSet['laOpt']
-            launchInput+=" "
+            launchInput+=f"{launchSet['laOpt']} "
         if key=="laAuto" and value==True:
             launchInput+="--auto-devices "
         if key=="laGPTQWay" and value=="GPTQ-for-LLaMa":
@@ -190,6 +190,8 @@ def getLaunchSet(ui):
                 launchInput+="--max_seq_len 6144  --compress_pos_emb 3 "
             elif value=="8192tokens（8192+4）":
                 launchInput+="--max_seq_len 8192  --compress_pos_emb 4 "
+        if key=="laModelDir" and value!="":
+            launchInput+=f"--model-dir {launchSet['laModelDir']} "
     return launchInput
                    
 def saveLaunchSet():
@@ -511,6 +513,8 @@ def readLaunchSetFromJson(ui):
                 if launchSet.get('laMaxTokens')!=None and launchSet.get('laMaxTokens')!="":
                     ui.laMaxTokens.setCurrentText(launchSet['laMaxTokens'])
 
+                if launchSet.get('laModelDir')!=None and launchSet.get('laModelDir')!="":
+                    ui.laModelDir.setText(launchSet.get('laModelDir'))
                 
         except FileNotFoundError:
                 return

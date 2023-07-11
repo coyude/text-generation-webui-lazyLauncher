@@ -429,15 +429,15 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-693</y>
         <width>1279</width>
-        <height>2650</height>
+        <height>2750</height>
        </rect>
       </property>
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>2650</height>
+        <height>2750</height>
        </size>
       </property>
       <property name="autoFillBackground">
@@ -449,7 +449,7 @@ QPushButton:hover {
          <x>20</x>
          <y>50</y>
          <width>1241</width>
-         <height>841</height>
+         <height>961</height>
         </rect>
        </property>
        <property name="font">
@@ -1486,12 +1486,123 @@ font: 18px &quot;微软雅黑&quot;;</string>
          </property>
         </widget>
        </widget>
+       <widget class="QFrame" name="frame_31">
+        <property name="geometry">
+         <rect>
+          <x>28</x>
+          <y>850</y>
+          <width>1180</width>
+          <height>90</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <widget class="QLineEdit" name="laModelDir">
+         <property name="geometry">
+          <rect>
+           <x>800</x>
+           <y>20</y>
+           <width>351</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_103">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>10</y>
+           <width>201</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 20px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>指定模型文件夹位置</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_107">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>691</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>微软雅黑</family>
+           
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(59, 59, 59);
+font: 18px &quot;微软雅黑&quot;;</string>
+         </property>
+         <property name="text">
+          <string>默认留空即为根目录下models文件夹</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_108">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>19</y>
+           <width>50</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-image:url(:/ss/gy_系统总览 (2).png)</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
       </widget>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>930</y>
+         <y>1030</y>
          <width>1241</width>
          <height>861</height>
         </rect>
@@ -2608,9 +2719,9 @@ QComboBox {
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>1810</y>
+         <y>1910</y>
          <width>1241</width>
-         <height>181</height>
+         <height>161</height>
         </rect>
        </property>
        <property name="font">
@@ -2775,7 +2886,7 @@ font: 18px &quot;微软雅黑&quot;;</string>
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>1990</y>
+         <y>2090</y>
          <width>1241</width>
          <height>341</height>
         </rect>
@@ -3181,7 +3292,7 @@ QCheckBox::indicator:checked {
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>2350</y>
+         <y>2450</y>
          <width>1241</width>
          <height>271</height>
         </rect>
@@ -4209,7 +4320,7 @@ QPushButton:hover {
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1279</width>
+        <width>98</width>
         <height>1300</height>
        </rect>
       </property>
@@ -5574,7 +5685,7 @@ QPushButton:hover {
   <widget class="QLabel" name="label_38">
    <property name="geometry">
     <rect>
-     <x>75</x>
+     <x>70</x>
      <y>900</y>
      <width>131</width>
      <height>31</height>
@@ -5586,7 +5697,7 @@ font: 24px &quot;微软雅黑&quot;
 </string>
    </property>
    <property name="text">
-    <string>V1.9</string>
+    <string>V1.10</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_50">

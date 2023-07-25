@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\Coding\text-generation-webui-lazyLauncher\lazyLauncher.ui'
+# Form implementation generated from reading ui file 'd:\Coding\lrbexe\untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -93,15 +93,7 @@ class tavUpdateThread(QThread): #sillytavernai更新线程
         global UI
         updateTAai(UI)
         self._signal.emit()
-
-class ggmlGPUThread(QThread): #ggml启用GPU加速线程
-    _signal =pyqtSignal()
-    def __init__(self):
-        super().__init__()
-    def run(self):
-        global UI
-        ggmlGPU()
-        self._signal.emit()      
+  
 # #############################################################自定义线程end
 
 class Ui_Form(object):
@@ -280,7 +272,7 @@ class Ui_Form(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scr_launch = QtWidgets.QWidget()
-        self.scr_launch.setGeometry(QtCore.QRect(0, -693, 1279, 2750))
+        self.scr_launch.setGeometry(QtCore.QRect(0, -1800, 1279, 2750))
         self.scr_launch.setMinimumSize(QtCore.QSize(0, 2750))
         self.scr_launch.setAutoFillBackground(True)
         self.scr_launch.setObjectName("scr_launch")
@@ -1518,69 +1510,6 @@ class Ui_Form(object):
         self.laGGMLlayer.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.laGGMLlayer.setFrame(False)
         self.laGGMLlayer.setObjectName("laGGMLlayer")
-        self.frame_30 = QtWidgets.QFrame(self.groupBox_7)
-        self.frame_30.setGeometry(QtCore.QRect(28, 150, 1180, 91))
-        self.frame_30.setFrameShape(QtWidgets.QFrame.Box)
-        self.frame_30.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.frame_30.setObjectName("frame_30")
-        self.label_98 = QtWidgets.QLabel(self.frame_30)
-        self.label_98.setGeometry(QtCore.QRect(90, 10, 131, 31))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(12)
-        self.label_98.setFont(font)
-        self.label_98.setText("")
-        self.label_98.setObjectName("label_98")
-        self.label_99 = QtWidgets.QLabel(self.frame_30)
-        self.label_99.setGeometry(QtCore.QRect(90, 40, 671, 31))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setPointSize(11)
-        self.label_99.setFont(font)
-        self.label_99.setStyleSheet("color:rgb(59, 59, 59)")
-        self.label_99.setText("")
-        self.label_99.setObjectName("label_99")
-        self.label_100 = QtWidgets.QLabel(self.frame_30)
-        self.label_100.setGeometry(QtCore.QRect(90, 0, 1051, 91))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label_100.setFont(font)
-        self.label_100.setStyleSheet("font: 20px \"微软雅黑\";")
-        self.label_100.setObjectName("label_100")
-        self.warn_8 = QtWidgets.QPushButton(self.frame_30)
-        self.warn_8.setGeometry(QtCore.QRect(12, 13, 61, 51))
-        self.warn_8.setFocusPolicy(QtCore.Qt.StrongFocus)
-        self.warn_8.setStyleSheet("QPushButton {\n"
-"    background-color:rgb(240,240,240);    \n"
-"         border-radius: 20px;\n"
-"\n"
-"}")
-        self.warn_8.setText("")
-        self.warn_8.setIcon(icon8)
-        self.warn_8.setIconSize(QtCore.QSize(43, 40))
-        self.warn_8.setObjectName("warn_8")
-        self.laGGMLGPUON = QtWidgets.QPushButton(self.frame_30)
-        self.laGGMLGPUON.setGeometry(QtCore.QRect(970, 20, 181, 51))
-        font = QtGui.QFont()
-        font.setFamily("微软雅黑")
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.laGGMLGPUON.setFont(font)
-        self.laGGMLGPUON.setStyleSheet("QPushButton {\n"
-"    color:white;\n"
-"    background-color:rgba(0, 120, 255,160);\n"
-"     border-radius: 20px;\n"
-"font: 25px \"微软雅黑\";\n"
-"}\n"
-"QPushButton:hover {\n"
-"     background-color:rgba(0, 120, 255, 130)\n"
-"}")
-        self.laGGMLGPUON.setIconSize(QtCore.QSize(30, 30))
-        self.laGGMLGPUON.setObjectName("laGGMLGPUON")
         self.scrollArea_3.setWidget(self.scr_launch)
         self.stackedWidget.addWidget(self.launch)
         self.model = QtWidgets.QWidget()
@@ -1916,7 +1845,7 @@ class Ui_Form(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scr_tools = QtWidgets.QWidget()
-        self.scr_tools.setGeometry(QtCore.QRect(0, 0, 98, 1300))
+        self.scr_tools.setGeometry(QtCore.QRect(0, 0, 1279, 1300))
         self.scr_tools.setMinimumSize(QtCore.QSize(0, 1300))
         self.scr_tools.setAutoFillBackground(True)
         self.scr_tools.setObjectName("scr_tools")
@@ -2648,9 +2577,6 @@ class Ui_Form(object):
         self.groupBox_7.setTitle(_translate("Form", "llama.cpp加载选项 【加载ggml模型】 注意：ggml模型请直接放在models根目录下"))
         self.label_77.setText(_translate("Form", "GPU加速"))
         self.label_78.setText(_translate("Form", "卸载到GPU的layer数 (可从10开始，若设置为1000000000则将所有layer卸载到GPU)"))
-        self.label_100.setText(_translate("Form", "首次启用GPU加速前必须点击右方“编译加速”按钮\n"
-"PS：电脑需要安装Visual Studio生成工具 (安装时选择桌面C++开发选项）"))
-        self.laGGMLGPUON.setText(_translate("Form", "编译加速"))
         self.label_13.setText(_translate("Form", "      hugging face用户名/仓库名"))
         self.label_15.setText(_translate("Form", "已检测到的本地模型"))
         self.moRefresh.setText(_translate("Form", "刷新列表"))
@@ -2712,6 +2638,7 @@ class Ui_Form(object):
         self.label_38.setText(_translate("Form", "V1.10"))
         self.label_50.setText(_translate("Form", "B站搜索coyude"))
 
+
 ###############################################################自定义模块和信号与槽函数begin
 
         getAnnoucement(self) #获取公告
@@ -2741,7 +2668,6 @@ class Ui_Form(object):
         self.toTaRu.clicked.connect(self.opTavCh)
         self.toTaUp.clicked.connect(self.upTavCh)
         self.upOpen.clicked.connect(openEnv)
-        self.laGGMLGPUON.clicked.connect(self.ggmlCh)
 
     def launchCh(self):#启动
         global UI
@@ -2815,13 +2741,6 @@ class Ui_Form(object):
         self.totavUpdateThread._signal.connect(self.toTAUp_btn)
         self.totavUpdateThread.start()
 
-    def ggmlCh(self):#启动ggml的GPU加速
-        global UI
-        UI=ui
-        self.laGGMLGPUON.setEnabled(False)
-        self.ggmlGPUThread = ggmlGPUThread()
-        self.ggmlGPUThread._signal.connect(self.laGGMLbtn)
-        self.ggmlGPUThread.start()
 
 
 
@@ -2844,8 +2763,6 @@ class Ui_Form(object):
         self.toAgnRun.setEnabled(True)
     def toAgnUp_btn(self):
         self.toAgnUp.setEnabled(True)
-    def laGGMLbtn(self):
-        self.laGGMLGPUON.setEnabled(True)
 
 
 # # ##############################################################自定义模块end
